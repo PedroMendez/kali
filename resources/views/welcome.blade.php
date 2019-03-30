@@ -76,7 +76,6 @@
                         <a href="{{ url('info') }}">{{ __('Agenda') }}</a>
                         <a href="{{ url('about') }}">{{ __('Quienes Somos') }}</a>
                     @auth
-
                         <a href="{{ url('/home') }}">Home</a>
                     @else   
                         <a href="{{ route('login') }}">Ingresar</a>
