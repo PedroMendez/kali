@@ -72,21 +72,17 @@
     <body style="background-image: url({{ asset('/svg/Kali_eyes.svg') }}); background-repeat: no-repeat; background-position: center; background-size: cover;">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                
                 <div class="top-right links">
                         <a href="{{ url('info') }}">{{ __('Agenda') }}</a>
                         <a href="{{ url('about') }}">{{ __('Quienes Somos') }}</a>
                     @auth
 
                         <a href="{{ url('/home') }}">Home</a>
-                    @else
-                    
+                    @else   
                         <a href="{{ route('login') }}">Ingresar</a>
 
                         @if (Route::has('register'))
-                    
                             <a href="{{ route('register') }}">Registrarme</a>
-                    
                         @endif
                     
                     @endauth
