@@ -9,6 +9,7 @@
                 @if(!$picture)
                     <img class="card-img-top" src="{{ asset('img/tree-of-life-butterflies.png') }}" alt="Card image">  
                 @else
+                
                     @if($picture->image1)
                         <img class="card-img-top" src="{{ url('https://s3.us-east-2.amazonaws.com/kaliholistico/'.$picture->image1) }}" alt="Card image"> 
                     @else 
@@ -60,6 +61,7 @@
                 @if(!$picture)
                     <img class="card-img-top" src="{{ asset('img/tree-of-life-butterflies.png') }}" alt="Card image">  
                 @else
+               
                     @if($picture->image2)
                         <img class="card-img-top" src="{{ url('https://s3.us-east-2.amazonaws.com/kaliholistico/'.$picture->image2) }}" alt="Card image"> 
                     @else 
@@ -111,6 +113,7 @@
                 @if(!$picture)
                     <img class="card-img-top" src="{{ asset('img/tree-of-life-butterflies.png') }}" alt="Card image">  
                 @else
+                
                     @if($picture->image3)
                         <img class="card-img-top" src="{{ url('https://s3.us-east-2.amazonaws.com/kaliholistico/'.$picture->image3) }}" alt="Card image"> 
                     @else 
