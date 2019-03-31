@@ -77,7 +77,7 @@ class ProfilesController extends Controller
         $role = Auth::user()->role;
         $id = Auth::id();
 
-        if($id == $profile->user_id || $role != 'User') 
+        if ($id == $profile->user_id || $role != 'User') 
         {
             $user = $profile->user;
             return view('profiles.show', compact('profile', 'user'));
@@ -96,7 +96,7 @@ class ProfilesController extends Controller
         $role = Auth::user()->role;
         $id = Auth::id();
 
-        if($id == $profile->user_id || $role != 'User') 
+        if ($id == $profile->user_id || $role != 'User') 
         {
             return view('profiles.edit', compact('profile'));
         }
@@ -115,7 +115,7 @@ class ProfilesController extends Controller
         $role = Auth::user()->role;
         $id = Auth::id();
 
-        if($id == $profile->user_id || $role != 'User') 
+        if ($id == $profile->user_id || $role != 'User') 
         {
             $profile->update(request()->validate([
                 'interests' => ['required', 'min:3'],
@@ -138,7 +138,7 @@ class ProfilesController extends Controller
         $role = Auth::user()->role;
         $id = Auth::id();
 
-        if($id == $profile->user_id || $role != 'User') 
+        if ($id == $profile->user_id || $role != 'User') 
         {
             $profile->delete();
 

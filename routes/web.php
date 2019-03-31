@@ -25,6 +25,8 @@ Route::get('/info', 'InfoController@index')->name('info');
 
 Route::get('/pictures', 'PicturesController@index')->name('pictures');
 
+Route::post('/pictures', 'PicturesController@store');
+
 Route::post('/avatars', 'AvatarsController@store');
 
 Route::resource('/profiles', 'ProfilesController');

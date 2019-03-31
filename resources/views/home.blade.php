@@ -64,9 +64,22 @@
                     @endif
 
                     Acá vas a ver las fotos de los encuentros en los que estuviste.
+                    @if(Auth::user()->profile_id)
+
                     <div class="text-right">
-                        <a href="{{ url('/pictures') }}" class="btn btn-primary">Acceder</a>
+                        <a href="{{ url('/pictures') }}" class="btn btn-primary">
+                            Acceder
+                        </a>
                     </div>
+                    @else
+
+                    <div class="text-right" class="btn btn-primary" disabled>
+                        <button>
+                            Creá tu perfil para Acceder
+                        </button>
+                    </div>                                   
+                    @endif
+
                 </div>
             </div>
         </div>
