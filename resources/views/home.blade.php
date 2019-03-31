@@ -73,10 +73,10 @@
                     </div>
                     @else
 
-                    <div class="text-right" class="btn btn-primary" disabled>
-                        <button>
-                            Creá tu perfil para Acceder
-                        </button>
+                    <div class="text-right">
+                        <a class="btn btn-primary" href="{{ url('profiles') }}">
+                            Creá tu perfil para acceder
+                        </a>
                     </div>                                   
                     @endif
 
