@@ -21,7 +21,6 @@
 
                 <div class="form-group form-inline">                
                     <label class="col-md-4" for="campo2">Coordinación física</label>
-    
                     <input 
                         type="text" 
                         name="campo21" 
@@ -30,10 +29,9 @@
                         aria-describedby="campo21" 
                         value="{{ $calendar->campo21 }}">                          
                 </div>
-                
+
                 <div class="form-group form-inline">
                     <label class="col-md-4" for="campo3">Nivel de concentración</label>
-
                     <input 
                         type="text" 
                         name="campo31" 
@@ -45,7 +43,6 @@
 
                 <div class="form-group form-inline">
                     <label class="col-md-4" for="campo4">Conexión con los demás</label>
-                    
                     <input 
                         type="text" 
                         name="campo41" 
@@ -57,7 +54,6 @@
 
                 <div class="form-group form-inline">
                     <label class="col-md-4" for="campo5">Más o menos intuitiva/o</label>
-                    
                     <input 
                         type="text" 
                         name="campo51" 
