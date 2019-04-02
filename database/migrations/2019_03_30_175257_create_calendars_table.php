@@ -16,21 +16,15 @@ class CreateCalendarsTable extends Migration
         Schema::create('calendars', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->string('campo11');
-            $table->string('campo12');
-            $table->string('campo13');
-            $table->string('campo21');
-            $table->string('campo22');
-            $table->string('campo23');
-            $table->string('campo31');
-            $table->string('campo32');
-            $table->string('campo33');
-            $table->string('campo41');
-            $table->string('campo42');
-            $table->string('campo43');
-            $table->string('campo51');
-            $table->string('campo52');
-            $table->string('campo53');
+
+            for ($i = 1; $i < 6; $i++) 
+            {
+                for ($j = 1; $j < 8; $j++) 
+                {
+                    $table->string('campo'.$i.$j)->nullable()->default(null);
+                };
+            };
+
             $table->timestamps();
         });
     }

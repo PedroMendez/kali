@@ -50,8 +50,7 @@ class ProfilesController extends Controller
     {
 
         request()->validate([
-            'interests' => ['required', 'min:3'],
-            'phone' => ['required', 'min:3']
+            'interests' => ['required', 'min:3']
         ]);
         
         $id = request('user_id');
@@ -118,8 +117,7 @@ class ProfilesController extends Controller
         if ($id == $profile->user_id || $role != 'User') 
         {
             $profile->update(request()->validate([
-                'interests' => ['required', 'min:3'],
-                'phone' => ['required', 'min:3']
+                'interests' => ['required', 'min:3']
             ]));
 
             return redirect('/profiles/'.$profile->id);

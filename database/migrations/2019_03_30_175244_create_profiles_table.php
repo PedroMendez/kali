@@ -17,8 +17,8 @@ class CreateProfilesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('interests');
-            $table->integer('phone');
-            $table->string('image');
+            $table->integer('phone')->nullable()->default(null);
+            $table->string('image')->nullable()->default(null);
             $table->unsignedInteger('pictures')->nullable()->default(null);                       
             $table->timestamps();
         });

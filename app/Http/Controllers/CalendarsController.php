@@ -45,49 +45,22 @@ class CalendarsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Calendar $calendar, User $user)
-    {
-        request()->validate(
-            [
-                'campo11' => ['required', 'min:3'],
-                'campo12' => ['required', 'min:3'],
-                'campo13' => ['required', 'min:3'],
-                'campo21' => ['required', 'min:3'],
-                'campo22' => ['required', 'min:3'], 
-                'campo23' => ['required', 'min:3'],
-                'campo31' => ['required', 'min:3'],
-                'campo32' => ['required', 'min:3'],
-                'campo33' => ['required', 'min:3'],
-                'campo41' => ['required', 'min:3'],
-                'campo42' => ['required', 'min:3'],
-                'campo43' => ['required', 'min:3'], 
-                'campo51' => ['required', 'min:3'],
-                'campo52' => ['required', 'min:3'],
-                'campo53' => ['required', 'min:3']
-            ]
-        );
-        
+    {   
         $id = request('user_id');
-        
-        Calendar::create(request(
-            [
-                'user_id', 
-                'campo11',
-                'campo12',
-                'campo13',
-                'campo21',
-                'campo22', 
-                'campo23', 
-                'campo31',
-                'campo32',
-                'campo33',
-                'campo41',
-                'campo42',
-                'campo43', 
-                'campo51',
-                'campo52',
-                'campo53'
-            ]
-        ));
+
+        $names = [];
+
+        array_push($names, 'user_id');
+
+        for ($i = 1; $i < 6; $i++) 
+        {
+            for ($j = 1; $j < 8; $j++) 
+            {
+                array_push($names, 'campo'.$i.$j);
+            };
+        };
+
+        Calendar::create(request($names));
         
         $calendar_id = Calendar::where('user_id', $id)->first()->id;
         $user = User::find($id);
@@ -128,25 +101,18 @@ class CalendarsController extends Controller
      */
     public function update(Calendar $calendar)
     {
-        $calendar->update(request()->validate(
-            [
-                'campo11' => ['required', 'min:3'],
-                'campo12' => ['required', 'min:3'],
-                'campo13' => ['required', 'min:3'],
-                'campo21' => ['required', 'min:3'],
-                'campo22' => ['required', 'min:3'], 
-                'campo23' => ['required', 'min:3'],
-                'campo31' => ['required', 'min:3'],
-                'campo32' => ['required', 'min:3'],
-                'campo33' => ['required', 'min:3'],
-                'campo41' => ['required', 'min:3'],
-                'campo42' => ['required', 'min:3'],
-                'campo43' => ['required', 'min:3'], 
-                'campo51' => ['required', 'min:3'],
-                'campo52' => ['required', 'min:3'],
-                'campo53' => ['required', 'min:3']
-            ]
-        ));
+
+        $names = [];
+
+        for ($i = 1; $i < 6; $i++) 
+        {
+            for ($j = 1; $j < 8; $j++) 
+            {
+                array_push($names, 'campo'.$i.$j);
+            };
+        };
+
+        $calendar->update(request()->validate($names));
 
         return redirect('/calendars/'.$calendar->id);
     }
