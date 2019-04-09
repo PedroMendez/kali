@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <div class="card card-home">
+            <div class="card card-home shadow">
                 <div class="card-header">Mariela Ponce</div>
 
                 <div class="card-body">
@@ -19,7 +19,7 @@
             </div>
         </div>    
         <div class="col-md-4">
-            <div class="card card-home">
+            <div class="card card-home shadow">
                 <div class="card-header">Nicte</div>
 
                 <div class="card-body">

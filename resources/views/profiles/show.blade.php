@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <div class="card">
+            <div class="card shadow">
                 <img class="card-img-top" src="{{ url('https://s3.us-east-2.amazonaws.com/kaliholistico/'.$profile->image) }}" alt="Profile image">
 
                 <div class="card-body">
@@ -46,7 +46,7 @@
             </div>
         </div>               
         <div class="col-md-8">
-            <div class="card card-home" >
+            <div class="card card-home shadow">
                 <div class="card-header">Mis datos</div>
 
                 <div class="card-body">

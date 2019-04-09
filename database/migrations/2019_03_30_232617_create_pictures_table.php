@@ -18,7 +18,10 @@ class CreatePicturesTable extends Migration
             $table->string('image1')->nullable()->default(null);
             $table->string('image2')->nullable()->default(null);
             $table->string('image3')->nullable()->default(null);
-            $table->unsignedInteger('profile_id')->nullable()->default(null);            
+            $table->unsignedInteger('profile_id')->nullable()->default(null); 
+
+            $table->foreign('profile_id')->references('id')->on('profiles')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

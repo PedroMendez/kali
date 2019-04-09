@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card card-home">
+            <div class="card card-home shadow">
                 <div class="card-header">Mi Calendario Lunar</div>
 
                 <div class="card-body">
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="col-md-8">
-            <div class="card card-home">
+            <div class="card card-home shadow">
                 <div class="card-header">Mis Lecturas</div>
 
                 <div class="card-body">
@@ -53,7 +53,7 @@
             </div>
         </div>        
         <div class="col-md-8">
-            <div class="card card-home">
+            <div class="card card-home shadow">
                 <div class="card-header">Mis Fotos</div>
 
                 <div class="card-body">

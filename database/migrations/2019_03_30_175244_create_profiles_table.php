@@ -19,7 +19,10 @@ class CreateProfilesTable extends Migration
             $table->string('interests');
             $table->integer('phone')->nullable()->default(null);
             $table->string('image')->nullable()->default(null);
-            $table->unsignedInteger('pictures')->nullable()->default(null);                       
+            $table->unsignedInteger('pictures')->nullable()->default(null);
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

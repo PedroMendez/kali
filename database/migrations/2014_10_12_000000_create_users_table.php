@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->unsignedInteger('profile_id')->nullable()->default(null);
             $table->unsignedInteger('calendar_id')->nullable()->default(null);            
             $table->string('role')->default('User');
-            $table->string('name')->unique();
+            $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
