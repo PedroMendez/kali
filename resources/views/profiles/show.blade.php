@@ -20,7 +20,7 @@
                         @csrf
 
                             <div class="form-group">
-                                <label for="avatar">Cambiar Avatar</label>
+                                <label for="avatar">Cambiar Foto</label>
                                 <input                            
                                     type="hidden" 
                                     name="profile_id" 
@@ -33,11 +33,11 @@
                                     id="avatar" 
                                     aria-describedby="avatar" 
                                     class="{{ $errors->has('avatar') ? 'alert-danger' : '' }}"
-                                    placeholder="Ingrese su Avatar"
+                                    placeholder="Ingrese su Foto"
                                     required>
                             </div>
                             <div class="text-right">
-                                <button type="submit" class="btn btn-primary">Guardar Avatar</button>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
                         @include('layouts.errors')
 
