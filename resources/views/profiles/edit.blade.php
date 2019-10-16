@@ -11,22 +11,22 @@
 
                     <div class="form-group">
                         <label for="interests">Intereses</label>
-                        <input 
-                            type="text" 
-                            name="interests" 
-                            class="form-control alert {{ $errors->has('interests') ? 'alert-danger' : '' }}" 
-                            id="interests" 
-                            aria-describedby="interests" 
+                        <input
+                            type="text"
+                            name="interests"
+                            class="form-control alert {{ $errors->has('interests') ? 'alert-danger' : '' }}"
+                            id="interests"
+                            aria-describedby="interests"
                             value="{{ $profile->interests }}">
                         <small id="interests" class="form-text text-muted">Nunca compartiremos esta información con nadie más.</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Teléfono</label>
-                        <input 
-                            type="text" 
-                            name="phone" 
-                            class="form-control alert {{ $errors->has('phone') ? 'alert-danger' : '' }}" 
-                            id="phone" 
+                        <input
+                            type="text"
+                            name="phone"
+                            class="form-control alert {{ $errors->has('phone') ? 'alert-danger' : '' }}"
+                            id="phone"
                             value="{{ $profile->phone }}">
                     </div>
                 <div class="text-right">
@@ -41,8 +41,8 @@
                     <div class="text-right">
                         <button type="submit" class="btn btn-secondary mt-3">Eliminar</button>
                     </div>
-            </form>            
+            </form>
         </div>
     </div>
-</div>            
+</div>
 @endsection
